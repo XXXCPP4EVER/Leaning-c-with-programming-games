@@ -1,30 +1,10 @@
 
 // guess the number game
-#include "Chapter1.h"
-void Hello()
-{
-	cout << "Welcome to guess the number game" << endl;
-	cout << " " << endl;
-	cout << "you need guess the number  from 1 to 100 include" << endl;
-	cout << " " << endl;
-	cout << "For beginner, you have been accrued 100$" << endl;
-	cout << " " << endl;
-	cout << "With every attempt you money will be decreased, but with every attempt randomly" << endl;
-	cout << " " << endl;
-	cout << " " << endl;
-	cout << "Good Luck!!!" << endl;
-	cout << " " << endl;
-	cout << " " << endl;
-	cout << " " << endl;
-}
+#include "Main.h"
+#include "Hello.cpp"
+#include "Gen secret number.cpp"
 
-void generate_secret_num()
-{
-	
-	srand(static_cast <unsigned int> (time(0))); // run the random number generator
-	secret_number = rand() % 100 + 1; //  to generate the random number 
 
-}
 
 void input_num()
 {
@@ -53,33 +33,32 @@ void game_logic()
 
 void money_paid()
 {
-	switch (tries)
+	/*if (tries == 1)
 	{
-	case 1:
-		tries = 4;
-		money *= 2;
-		break;
-	case 2:
-		tries = 7;
-		money += 30;
-		break;
-	case 4:
-		tries = 9;
-		money += 10;
-		break;
-	case 5:
-		tries = 1;
-		money *= 100;
-		break;
-	case 6:
-		tries = 5;
-		money += 50;
-		break;
-	default:
-		break;
+		cout << "JACKPOT";
+		money *= 10;
+	}*/
+	if (tries <= 4)
+	{
+		money *= 4;
+		if (tries == 1)
+		{
+		cout << "JACKPOT";
+		money *= 10;
+		}
 	}
-	if (tries <= 8)
+		
+	if (tries <= 7)
 		money += 50;
+
+	if (tries <= 8)
+		money += 40;
+
+	if (tries <= 10)
+		money += 30;
+
+	else
+		cout << "You don't paid" << endl;
 
 	cout << "Money = " << money << "$" << endl;
 }
@@ -93,7 +72,6 @@ void Game_End()
 	cout << " " << endl;
 	cout << "Number of attempt = " << tries << endl;
 	cout << " " << endl;
-	money_paid();
 	cout << " " << endl;
 	cout << " " << endl;
 	cout << "Thank you for the game!!!!! " << endl;
@@ -123,6 +101,7 @@ void main_circle()
 		generate_secret_num();
 		one_game_circle();
 		Game_End();
+		money_paid();
 	}
 }
 

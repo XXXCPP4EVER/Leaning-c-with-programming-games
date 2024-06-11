@@ -13,15 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Исходные файлы\Hello">
+      <UniqueIdentifier>{a8dca3d5-b7bd-4c76-abbc-c11027a537d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Main">
+      <UniqueIdentifier>{e48a8bc8-5e6f-42fd-a085-76feabb9d00f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Generate Secret Number">
+      <UniqueIdentifier>{bc1e4f2d-b1b4-4def-81d1-d55086d3445e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Chapter 1.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="Hello.cpp">
+      <Filter>Исходные файлы\Hello</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Исходные файлы\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Gen secret number.cpp">
+      <Filter>Исходные файлы\Generate Secret Number</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Chapter1.h">
-      <Filter>Исходные файлы</Filter>
+    <ClInclude Include="Hello.h">
+      <Filter>Исходные файлы\Hello</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Исходные файлы\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Gen secret number.h">
+      <Filter>Исходные файлы\Generate Secret Number</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
