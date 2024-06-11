@@ -22,6 +22,24 @@
     <Filter Include="Исходные файлы\Generate Secret Number">
       <UniqueIdentifier>{bc1e4f2d-b1b4-4def-81d1-d55086d3445e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\Input number">
+      <UniqueIdentifier>{8af7afd0-4f81-43c2-8307-a73e3732dac3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Game logic">
+      <UniqueIdentifier>{73265556-b164-4071-8261-454ed05abbc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Money Paid">
+      <UniqueIdentifier>{b204e311-8994-4aa7-9807-bcbd78412524}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Game_End">
+      <UniqueIdentifier>{68d083c4-1e24-493e-a386-70ae3e3f022f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\one_game_circle">
+      <UniqueIdentifier>{7fbe4a78-2940-4478-a4ea-da432f6f6e41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\Main_circle">
+      <UniqueIdentifier>{f38252e0-4527-4c4f-863b-6cebd88bf33f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Hello.cpp">
@@ -33,6 +51,24 @@
     <ClCompile Include="Gen secret number.cpp">
       <Filter>Исходные файлы\Generate Secret Number</Filter>
     </ClCompile>
+    <ClCompile Include="Input number.cpp">
+      <Filter>Исходные файлы\Input number</Filter>
+    </ClCompile>
+    <ClCompile Include="Game logic.cpp">
+      <Filter>Исходные файлы\Game logic</Filter>
+    </ClCompile>
+    <ClCompile Include="Money Paid.cpp">
+      <Filter>Исходные файлы\Money Paid</Filter>
+    </ClCompile>
+    <ClCompile Include="Game_End.cpp">
+      <Filter>Исходные файлы\Game_End</Filter>
+    </ClCompile>
+    <ClCompile Include="one_game_circle.cpp">
+      <Filter>Исходные файлы\one_game_circle</Filter>
+    </ClCompile>
+    <ClCompile Include="main_circle.cpp">
+      <Filter>Исходные файлы\Main_circle</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Hello.h">
@@ -43,6 +79,24 @@
     </ClInclude>
     <ClInclude Include="Gen secret number.h">
       <Filter>Исходные файлы\Generate Secret Number</Filter>
+    </ClInclude>
+    <ClInclude Include="Input number.h">
+      <Filter>Исходные файлы\Input number</Filter>
+    </ClInclude>
+    <ClInclude Include="Game logic.h">
+      <Filter>Исходные файлы\Game logic</Filter>
+    </ClInclude>
+    <ClInclude Include="Money Paid.h">
+      <Filter>Исходные файлы\Money Paid</Filter>
+    </ClInclude>
+    <ClInclude Include="Game_End.h">
+      <Filter>Исходные файлы\Game_End</Filter>
+    </ClInclude>
+    <ClInclude Include="one_game_circle.h">
+      <Filter>Исходные файлы\one_game_circle</Filter>
+    </ClInclude>
+    <ClInclude Include="main_circle.h">
+      <Filter>Исходные файлы\Main_circle</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -128,14 +128,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Game logic.cpp" />
+    <ClCompile Include="Game_End.cpp" />
     <ClCompile Include="Gen secret number.cpp" />
+    <ClCompile Include="Input number.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Hello.cpp" />
+    <ClCompile Include="main_circle.cpp" />
+    <ClCompile Include="Money Paid.cpp" />
+    <ClCompile Include="one_game_circle.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Game logic.h" />
+    <ClInclude Include="Game_End.h" />
     <ClInclude Include="Gen secret number.h" />
+    <ClInclude Include="Input number.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Hello.h" />
+    <ClInclude Include="main_circle.h" />
+    <ClInclude Include="Money Paid.h" />
+    <ClInclude Include="one_game_circle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
