@@ -73,82 +73,104 @@
 
 // игра угадай число
 
-#include <iostream> 
-#include <cstdlib> // подключение директивы генерации рандомных чисел
-#include <ctime>   //Функция ctime() определяется в заголовочном файле time.h. 
-//Функция ctime() возвращает строку, представляющую локальное время, на основе аргумента timer. 
-//Включение директивы позволяет генерировать числа на основе даты и времени.
+#include "Chapter1.h"
 
-using namespace std;
-int scores = 100;
+void Hello()
+{
+	cout << "Добро пожаловать в игру Угадай число" << endl;
+	cout << " " << endl;
+	cout << "Вам нужно угадать число от 1 до 100 включительно" << endl;
+	cout << " " << endl;
+	cout << "В начале игры вам начисляется 100$" << endl;
+	cout << " " << endl;
+	cout << "С каждой попыткой количестdо денег будет отниматься, но каждый раз рандомно в диапозоне от 1 до 20" << endl;
+	cout << " " << endl;
+	cout << "Когда вы угадаете число, вам будет начислено 50 $" << endl;
+	cout << " " << endl;
+	cout << " " << endl;
+	cout << " " << endl;
+}
+
+void generate_secret_num()
+{
+	
+	srand(static_cast <unsigned int> (time(0))); // запускаем генератор случайных чисел
+	secret_number = rand() % 100 + 1; // генерируем случайное число между 1 и 100
+
+}
+
+void input_num()
+{
+	cout << "Введите число от 1 до 100" << endl;
+	cout << " " << endl;
+	cout << "Количество денег = " << scores << endl;
+	cout << " " << endl;
+	cin >> guess_number;
+}
+
+void game_logic()
+{
+	if (guess_number > secret_number)
+	{
+		cout << "Слишком много" << endl;
+		cout << " " << endl;
+		scores -= rand() % 20 + 1;
+	}
+	else
+	{
+		cout << "Слишком мало" << endl;
+		cout << " " << endl;
+		scores -= rand() % 20 + 1;
+	}
+}
+
+void Game_End()
+{
+	scores += 50;
+
+	cout << "Вы угадали!!!" << endl;
+	cout << " " << endl;
+	cout << "Загаданное число = " << secret_number << endl;
+	cout << " " << endl;
+	cout << "Количество попыток = " << tries << endl;
+	cout << " " << endl;
+	cout << "вам  начислено 50 $" << endl;
+	cout << " " << endl;
+	cout << "Количество денег = " << scores << "$" << endl;
+	cout << " " << endl;
+	cout << "Cпасибо за игру!!!!! " << endl;
+	cout << " " << endl;
+	cout << " " << endl;
+	cout << " " << endl;
+}
+
+void one_game_circle()
+{
+	do
+	{
+		tries++; // подсчет попыток
+		input_num();
+		game_logic();
+		
+	} while (secret_number != guess_number); //Цикл выполняется, пока мы не угадаем число
+}
+
+void main_circle()
+{
+	while (true)
+	{
+		Hello();
+		generate_secret_num();
+		one_game_circle();
+		Game_End();
+	}
+}
 
 int main()
 {
 	setlocale(LC_ALL, "Ru"); //Введение русскоязычной директивы
 
-	while (true)
-	{
-		cout << "Добро пожаловать в игру Угадай число" << endl;
-		cout << " " << endl;
-		cout << "Вам нужно угадать число от 1 до 100 включительно" << endl;
-		cout << " " << endl;
-		cout << "В начале игры вам начисляется 100$" << endl;
-		cout << " " << endl;
-		cout << "С каждой попыткой количестdо денег будет отниматься, но каждый раз рандомно в диапозоне от 1 до 20" << endl;
-		cout << " " << endl;
-		cout << "Когда вы угадаете число, вам будет начислено 50 $" << endl;
-		cout << " " << endl;
-		cout << " " << endl;
-		cout << " " << endl;
-		int secret_number; // введение загадываемого числа
-		int guess_number = 0; // Число, которое мы будем вводить, чтобы угадать, по дефолту  = 0, т.к. вылезает ошибка компилятора
+	main_circle();
 
-		srand(static_cast <unsigned int> (time(0))); // запускаем генератор случайных чисел
-		secret_number = rand() % 100 + 1; // генерируем случайное число между 1 и 100
-		int tries = 0; // Количество попыток
-		
-		do
-		{
-
-			tries++; // подсчет попыток
-			cout << "Введите число от 1 до 100" << endl;
-			cout << " " << endl;
-			cout << "Количество денег = " << scores << endl;
-			cout << " " << endl;
-			cin >> guess_number;
-
-			if (guess_number > secret_number)
-			{
-				cout << "Слишком много" << endl;
-				cout << " " << endl;
-				scores -= rand() % 20 + 1;
-			}
-			else
-			{
-				cout << "Слишком мало" << endl;
-				cout << " " << endl;
-				scores -= rand() % 20 + 1;
-			}
-		} while (secret_number != guess_number); //Цикл выполняется, пока мы не угадаем число
-
-		scores += 50;
-		
-		cout << "Вы угадали!!!" << endl;
-		cout << " " << endl;
-		cout << "Загаданное число = " << secret_number << endl;
-		cout << " " << endl;
-		cout << "Количество попыток = " << tries << endl;
-		cout << " " << endl;
-		cout << "вам  начислено 50 $" << endl;
-		cout << " " << endl;
-		cout << "Количество денег = " << scores << "$" << endl;
-		cout << " " << endl;
-		cout << "Cпасибо за игру!!!!! " << endl;
-		cout << " " << endl;
-		cout << " " << endl;
-		cout << " " << endl;
-	}
-		
 	return 0;
 }
-
